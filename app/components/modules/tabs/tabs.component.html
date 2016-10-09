@@ -1,0 +1,13 @@
+<TabView  [selectedIndex]="tabindex" selectedColor="#FF0000">
+    <StackLayout *tabItem="{title: 'Appertiser'}" >
+        <Label text="Hello, I am Appertiser" marginTop="20" fontSize="20" horizontalAlignment="center" textAlignment="center"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Noodles'}" >
+        <product-list></product-list>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Seafood'}">
+        <Label text="Hello, I am Seafood" marginTop="20" fontSize="20"  textAlignment="left"></Label>
+    </StackLayout>
+</TabView>
+
+

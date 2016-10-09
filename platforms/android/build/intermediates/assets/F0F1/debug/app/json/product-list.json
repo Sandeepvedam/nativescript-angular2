@@ -1,0 +1,18 @@
+[
+  {
+    "productName": "Elvis Keith",
+    "productImage": "http://www.themarsh.com/images/thumbnails/thumbnail-food-app.jpg",
+    "productPrice": "$ 23.50",
+    "productTags": ["chicken", "vegetable", "fresh"],
+    "productShortDescription": "Medium Hot",
+    "iconImage": "~/images/plusIconRedColor.png"
+  },
+  {
+    "productName": "Ginger Pullapart",
+    "productImage": "http://www.themarsh.com/images/thumbnails/thumbnail-food-app.jpg",
+    "productPrice": "$ 10.00",
+    "productTags": ["breakfast"],
+    "productShortDescription": "Meidum Hot",
+    "iconImage": "~/images/plusIconRedColor.png"
+  }
+]

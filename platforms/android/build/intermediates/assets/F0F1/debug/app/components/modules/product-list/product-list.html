@@ -1,0 +1,44 @@
+
+    <GridLayout rows="auto,*">
+        <ListView style="margin-bottom: 50px;" [items]="products" row="1">
+            <template let-item="item">
+                <GridLayout  rows="auto" columns="auto,*" class="list-wrapper">
+                    <Image  row="0" col="0" [src]="item.productImage" horizontalAlignment="left"></Image>
+                    <StackLayout row="0" col="1" orientation="vertical" horizontalAlignment="left" class="productDetail">
+                        <Label [text]='item.productName' horizontalAlignment="left" class="productHeading"></Label>
+                        <Label [text]='item.productShortDescription'  horizontalAlignment="left" class="productDescription"></Label>
+                        <Label [text]='item.productTags'  horizontalAlignment="left" class="productTags"></Label>
+                    </StackLayout>
+                    <Image row="0" col="2" [src]="item.iconImage" width="20px" height="20px" horizontalAlignment="right"  verticalAlignment="top" marginRight="10"></Image>
+                    <Label row="0" col="2" [text]='item.productPrice' verticalAlignment="bottom" horizontalAlignment="right" class="productPrice"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+
+        <Image #wishlistFabButton  src="~/images/group.png" row="1" (tap)="toggleNav('wishList')" rippleColor="#f1f1f1" class="speed-button wishlistFabButton"></Image>
+
+        <Image #reviewFabButton src="~/images/question.png" row="1" (tap)="toggleNav('reviewOrder')" rippleColor="#f1f1f1" class="speed-button reviewFabButton"></Image>
+
+        <Image #checkoutFabButton src="~/images/cart.png" row="1" (tap)="toggleNav('checkout')" rippleColor="#f1f1f1" class="speed-button checkoutFabButton"></Image>
+
+        <!--<Button row="1" #wishlistFabButton (tap)="toggleNav('wishList')" icon="~/images/review-file.png" rippleColor="#f1f1f1" class="speed-button wishlistFabButton">
+            <StackLayout>
+                <Image src="~/images/choice.png" width="10" height="10"></Image>
+            </StackLayout>
+        </Button>-->
+        <!--<Button row="1" #reviewFabButton (tap)="toggleNav('reviewOrder')" android.systemIcon="~/images/review-file.png" rippleColor="#f1f1f1" text="Review Order" class="speed-button reviewFabButton"></Button>-->
+        <!--<Button row="1" #checkoutFabButton (tap)="toggleNav('checkout')" icon="~/images/cart.png" rippleColor="#f1f1f1" text="Checkout"class="speed-button checkoutFabButton"></Button>-->
+
+        <FAB #fab row="1" (tap)="toggleNav('Menu')" icon="~/images/add.png" rippleColor="#f1f1f1" class="fab-button">
+        </FAB>
+
+     <!--   <FAB #fab row="1" *ngIf="!isMenuFabButton" (tap)="toggleNav('Close')" icon="~/images/cancel.png" rippleColor="#f1f1f1" class="fab-button">
+        </FAB>-->
+
+        <GridLayout row="1" column="0" rows="auto" columns="60,*,60" verticalAlignment="bottom"  minHeight="50"  backgroundColor="red" cssClass="footer">
+            <Label text="5 items" col="0" color="#10C2B0" fontSize="14" verticalAlignment="center"></Label>
+            <Button col="1" row="0" class="button button-small button-light footerButton" text="Review Order"></Button>
+            <Label text="$65.30" col="2" row="0" color="#10C2B0"  fontSize="16" verticalAlignment="center"></Label>
+        </GridLayout>
+    </GridLayout>
+

@@ -1,0 +1,34 @@
+﻿
+button, label, stack-layout {
+    horizontal-align: center;    
+}
+
+button {
+    font-size: 36;
+}
+
+.title {
+    font-size: 30;
+    margin: 20;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    text-align: center;
+    margin: 0 20;
+}
+
+ActionBar {
+    background-color: #444444;
+    color: white;
+    text-transform: none !important;
+}
+
+
+.actionItem{
+    font-size: 18px;
+    color: white;
+    text-transform: none !important;
+}
+
